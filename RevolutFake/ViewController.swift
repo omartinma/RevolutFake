@@ -8,14 +8,70 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int
+    {
+        return transactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+                // Table view cells are reused and should be dequeued using a cell identifier.
+                let cellIdentifier = "TransactionTableViewCell"
+        
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TransactionTableViewCell  else {
+                    fatalError("The dequeued cell is not an instance of TransactionTableViewCell.")
+                }
+        
+                // Fetches the appropriate meal for the data source layout.
+                let transaction = transactions[indexPath.row]
+        
+                cell.conceptLabel.text = transaction
+        
+        
+                return cell
+    }
+    
+    
+    var transactions: [String] = []
+    
+    // MARK: - Table view data source
+    @IBOutlet weak var myTableView: UITableView!
+    
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return transactions.count
+//    }
+//    
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        // Table view cells are reused and should be dequeued using a cell identifier.
+//        let cellIdentifier = "TransactionTableViewCell"
+//        
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TransactionTableViewCell  else {
+//            fatalError("The dequeued cell is not an instance of TransactionTableViewCell.")
+//        }
+//        
+//        // Fetches the appropriate meal for the data source layout.
+//        let transaction = transactions[indexPath.row]
+//        
+//        cell.conceptLabel.text = transaction
+//
+//        
+//        return cell
+//    }
+    
 
     @IBOutlet weak var totalAmountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
          loadTotalAmount()
-       
+       transactions = ["Atletico de Madrid", "Barcelona", "Deportivo de la Coruña", "Las Palmas", "Malaga", "Rayo Vallecano", "Sporting", "Real Sociedad", "Espanyol", "Mallorca", "Valladolid", "Eibar",  "Ponferradina", "Albacete"]
     }
 
     func loadTotalAmount(){
