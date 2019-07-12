@@ -13,6 +13,8 @@
 		E38157EE22C549030043D279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38157ED22C549030043D279 /* Assets.xcassets */; };
 		E38157F122C549030043D279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38157EF22C549030043D279 /* LaunchScreen.storyboard */; };
 		E3E46A3922D934BE00C1FBD5 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A3822D934BE00C1FBD5 /* TransactionTableViewCell.swift */; };
+		E3E46A3D22D93A3900C1FBD5 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A3C22D93A3900C1FBD5 /* Transaction.swift */; };
+		E3E46A3F22D9412C00C1FBD5 /* MonthSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A3E22D9412C00C1FBD5 /* MonthSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E38157F022C549030043D279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38157F222C549030043D279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3E46A3822D934BE00C1FBD5 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		E3E46A3C22D93A3900C1FBD5 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E3E46A3E22D9412C00C1FBD5 /* MonthSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,10 @@
 		E38157E522C549030043D279 /* RevolutFake */ = {
 			isa = PBXGroup;
 			children = (
+				E3E46A3B22D93A1E00C1FBD5 /* Model */,
+				E3E46A3A22D939F800C1FBD5 /* Controllers */,
 				E3E46A3722D9348E00C1FBD5 /* Views */,
 				E38157E622C549030043D279 /* AppDelegate.swift */,
-				E38157E822C549030043D279 /* ViewController.swift */,
 				E38157EA22C549030043D279 /* Main.storyboard */,
 				E38157ED22C549030043D279 /* Assets.xcassets */,
 				E38157EF22C549030043D279 /* LaunchScreen.storyboard */,
@@ -73,6 +78,23 @@
 				E3E46A3822D934BE00C1FBD5 /* TransactionTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E3E46A3A22D939F800C1FBD5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E38157E822C549030043D279 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E3E46A3B22D93A1E00C1FBD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3E46A3C22D93A3900C1FBD5 /* Transaction.swift */,
+				E3E46A3E22D9412C00C1FBD5 /* MonthSection.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +173,8 @@
 			files = (
 				E38157E922C549030043D279 /* ViewController.swift in Sources */,
 				E3E46A3922D934BE00C1FBD5 /* TransactionTableViewCell.swift in Sources */,
+				E3E46A3D22D93A3900C1FBD5 /* Transaction.swift in Sources */,
+				E3E46A3F22D9412C00C1FBD5 /* MonthSection.swift in Sources */,
 				E38157E722C549030043D279 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
