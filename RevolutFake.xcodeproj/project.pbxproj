@@ -15,6 +15,7 @@
 		E3E46A3922D934BE00C1FBD5 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A3822D934BE00C1FBD5 /* TransactionTableViewCell.swift */; };
 		E3E46A3D22D93A3900C1FBD5 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A3C22D93A3900C1FBD5 /* Transaction.swift */; };
 		E3E46A3F22D9412C00C1FBD5 /* MonthSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A3E22D9412C00C1FBD5 /* MonthSection.swift */; };
+		E3E46A4122D94C0700C1FBD5 /* TransactionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E46A4022D94C0700C1FBD5 /* TransactionHeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E3E46A3822D934BE00C1FBD5 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3E46A3C22D93A3900C1FBD5 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		E3E46A3E22D9412C00C1FBD5 /* MonthSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSection.swift; sourceTree = "<group>"; };
+		E3E46A4022D94C0700C1FBD5 /* TransactionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				E3E46A3822D934BE00C1FBD5 /* TransactionTableViewCell.swift */,
+				E3E46A4022D94C0700C1FBD5 /* TransactionHeaderTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				E3E46A3D22D93A3900C1FBD5 /* Transaction.swift in Sources */,
 				E3E46A3F22D9412C00C1FBD5 /* MonthSection.swift in Sources */,
 				E38157E722C549030043D279 /* AppDelegate.swift in Sources */,
+				E3E46A4122D94C0700C1FBD5 /* TransactionHeaderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

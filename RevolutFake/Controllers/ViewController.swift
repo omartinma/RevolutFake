@@ -26,12 +26,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return self.sections.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let section = self.sections[section]
+//        let date = section.month
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "MMMM yyyy"
+//        return dateFormatter.string(from: date)
+//    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        //Calculate the header text
         let section = self.sections[section]
         let date = section.month
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM yyyy"
-        return dateFormatter.string(from: date)
+        let text = dateFormatter.string(from: date)
+        
+        // Custom the view
+//        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+//        headerView.backgroundColor = UIColor.red
+//        let label = UILabel()
+//        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+//        label.text = text
+//        label.textColor = UIColor.darkGray
+//        label.backgroundColor = UIColor.blue
+//
+//        headerView.addSubview(label)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionHeaderTableViewCell") as? TransactionHeaderTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of TransactionTableViewCell.")
+        }
+        cell.DateHeaderLabel.text = text
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
