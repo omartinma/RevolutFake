@@ -77,14 +77,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let groups = Dictionary(grouping: self.transactions) { (transaction) in
             return firstDayOfMonth(date: transaction.date)
         }
-        self.sections = groups.map(MonthSection.init(month:transactions:))
+        self.sections = groups.map(MonthSection.init(month:transactions:)).sorted()
     }
 
     func loadTransactions(){
         let trans1 = Transaction(concept: "Libro", date: Date())
         let trans2 = Transaction(concept: "Libro2", date: Date())
         
-        transactions = [trans1,trans2]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let date3 = formatter.date(from: "01.06.2019") ?? Date()
+        let trans3 = Transaction(concept: "Libro3", date: date3)
+
+        
+        transactions = [trans1,trans2,trans3]
     }
     
     func loadTotalAmount(){
