@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+        return 70
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.conceptLabel.text = transaction.concept
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "MMM dd, HH.mm"
         cell.dateLabel.text = formatter.string(from: transaction.date)
         
         return cell
