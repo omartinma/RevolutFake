@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Test-->
+        <!--Accounts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Test" id="BYZ-38-t0r" customClass="ViewController" customModule="RevolutFake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Accounts" id="BYZ-38-t0r" customClass="AccountsViewController" customModule="RevolutFake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="C4A-G0-3KO"/>
+                    <tabBarItem key="tabBarItem" title="Accounts" id="C4A-G0-3KO"/>
                     <navigationItem key="navigationItem" id="umo-5G-3uG"/>
                     <connections>
                         <outlet property="myTableView" destination="QMy-02-G9H" id="ufm-Z6-XLB"/>

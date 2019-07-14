@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AccountsViewController.swift
 //  RevolutFake
 //
 //  Created by Oscar Martín on 27/06/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Properties
     @IBOutlet weak var myTableView: UITableView!
