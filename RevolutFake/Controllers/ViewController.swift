@@ -9,12 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK: Properties
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var totalAmountLabel: UILabel!
     var transactions: [Transaction] = []
     var sections: [MonthSection] = []
     
-    // Functions for Table
+    // MARK: Functions for TableView
     
     func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int
     {
@@ -26,14 +28,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return self.sections.count
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let section = self.sections[section]
-//        let date = section.month
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "MMMM yyyy"
-//        return dateFormatter.string(from: date)
-//    }
-    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         //Calculate the header text
@@ -43,22 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateFormatter.dateFormat = "MMMM yyyy"
         let text = dateFormatter.string(from: date)
         
-        // Custom the view
-//        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-//        headerView.backgroundColor = UIColor.red
-//        let label = UILabel()
-//        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-//        label.text = text
-//        label.textColor = UIColor.darkGray
-//        label.backgroundColor = UIColor.blue
-//
-//        headerView.addSubview(label)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionHeaderTableViewCell") as? TransactionHeaderTableViewCell  else {
             fatalError("The dequeued cell is not an instance of TransactionTableViewCell.")
         }
         cell.DateHeaderLabel.text = text
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
@@ -93,7 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     // Mark: Inits
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -108,7 +93,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         self.sections = groups.map(MonthSection.init(month:transactions:)).sorted()
     }
-
+    
     func loadTransactions(){
         let trans1 = Transaction(concept: "Libro", date: Date())
         let trans2 = Transaction(concept: "Libro2", date: Date())
@@ -117,7 +102,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         formatter.dateFormat = "dd.MM.yyyy"
         let date3 = formatter.date(from: "01.06.2019") ?? Date()
         let trans3 = Transaction(concept: "Libro3", date: date3)
-
+        
         
         transactions = [trans1,trans2,trans3]
     }
