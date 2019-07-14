@@ -168,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Accounts" id="C4A-G0-3KO"/>
+                    <tabBarItem key="tabBarItem" title="Accounts" image="Accounts" id="C4A-G0-3KO"/>
                     <navigationItem key="navigationItem" id="umo-5G-3uG"/>
                     <connections>
                         <outlet property="myTableView" destination="QMy-02-G9H" id="ufm-Z6-XLB"/>
@@ -186,6 +186,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZxM-O7-QRk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mwv-ka-2f6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -216,6 +217,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Accounts" width="100" height="100"/>
         <image name="Details" width="100" height="100"/>
         <image name="Restaurant" width="100" height="100"/>
         <image name="RevolutTopUp" width="100" height="100"/>
